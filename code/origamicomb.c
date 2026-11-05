@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
   for (i=0; i<div_factor; i++) {
     for (j=0; j<div_factor; j++) {
       for (k=0; k<div_factor; k++) {
-        sprintf(tagsubfile,"%s%stag_d.dat",outdir,label,i+(div_factor*j)+(df2*k)); //fixed filename mismatch with oriagmidiv
+        sprintf(tagsubfile,"%s%s_tag_%d.dat",outdir,label,i+(div_factor*j)+(df2*k)); //fixed filename mismatch with oriagmidiv
 	    ijk = (df2*i)+(div_factor*j)+k;
 	    sub[ijk] = fopen(tagsubfile,"r");
 		//Safety check that gives clearer error message that 'Segmentation fault'
